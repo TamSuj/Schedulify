@@ -1,18 +1,24 @@
-// src/app/page.tsx
-
 import Header from "./header";
 import Features from "./features";
 import Footer from "./footer";
 import Workflow from "./workflow";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white text-black dark:bg-black dark:text-white">
+    <main className="flex min-h-screen flex-col bg-white dark:bg-black text-black dark:text-white">
       <Header />
-      <section className="w-full max-w-4xl mx-auto">
-        <div className="grid gap-10 lg:grid-cols-2">
+      <section className="flex-grow flex flex-col items-center justify-center px-6 py-12 mx-auto max-w-4xl">
+        <div className="grid gap-10 lg:grid-cols-2 w-full">
           <Features />
           <Workflow />
+        </div>
+        <div className="mt-8">
+          <Link href="/interaction">
+            <button className="px-6 py-3 bg-gradient-to-r from-green-400 to-teal-500 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500">
+              Interact with AI Scheduler
+            </button>
+          </Link>
         </div>
       </section>
       <Footer />
