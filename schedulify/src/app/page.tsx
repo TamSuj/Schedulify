@@ -1,7 +1,5 @@
-import Calendar from "../calendar.js";
+import Calendar from "./components/calendar.js";
 
 export default function Home() {
-  return (
-    <Calendar></Calendar>
-  );
+  return <Calendar></Calendar>;
 }
