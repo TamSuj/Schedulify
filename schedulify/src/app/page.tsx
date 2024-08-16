@@ -1,12 +1,14 @@
+"use client";
 import Header from "./header";
 import Features from "./features";
 import Footer from "./footer";
 import Workflow from "./workflow";
 import Link from "next/link";
+import Calendar from "@/app/calendar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-white dark:bg-black text-black dark:text-white">
+    <main className="flex min-h-screen flex-col bg-white text-black">
       <Header />
       <section className="flex-grow flex flex-col items-center justify-center px-6 py-12 mx-auto max-w-4xl">
         <div className="grid gap-10 lg:grid-cols-2 w-full">
@@ -21,6 +23,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <Calendar />
       <Footer />
     </main>
   );

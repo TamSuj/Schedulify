@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import dotenv from 'dotenv';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { Calendar } from '@fullcalendar/core';
+import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -45,3 +47,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+
+// let calendar = new Calendar(calendarEl, {
+//   plugins: [ googleCalendarPlugin ],
+//   googleCalendarApiKey: 'AIzaSyBOaBpjRnkfateuafPtD3_IE_-YZMfMdiE',
+//   events: {
+//     googleCalendarId: '9a090e5f7478a662ee8cbd7d9ea4b2053bdf77caf3999e338304962175e63b7a@group.calendar.google.com'
+//   }
+// });
