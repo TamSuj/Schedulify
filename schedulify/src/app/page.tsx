@@ -1,10 +1,10 @@
 "use client";
-import Header from "./header";
-import Features from "./features";
-import Footer from "./footer";
-import Workflow from "./workflow";
+import Header from "./components/header";
+import Features from "./components/features";
+import Footer from "./components/footer";
+import Workflow from "./components/workflow";
 import Link from "next/link";
-import Calendar from "@/app/calendar";
+import Calendar from "@/app/components/calendar";
 
 export default function Home() {
   return (
