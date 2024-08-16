@@ -6,7 +6,7 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 export default function Calendar() {
     return (
-        <div className="bg-white rounded-lg shadow-lg p-6 w-full">
+        <div className="bg-white flex rounded-lg shadow-lg p-6 h-screen justify-center items-center">
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, googleCalendarPlugin]}
                 headerToolbar={{

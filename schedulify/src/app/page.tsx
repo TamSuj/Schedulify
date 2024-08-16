@@ -1,18 +1,20 @@
 "use client";
-import Header from "./header";
 import Calendar from "@/app/calendar";
-import Features from "./features";
-import Footer from "./footer";
-import Workflow from "./workflow";
-import Link from "next/link";
-import AddEventButton from "@/app/addEventButton";
-import Modal from "@/app/modal";
+import Modal from "./modal";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-white text-black">
-      <Header />
-      <Calendar />
+      <div className="add-task-and-calendar flex flex-row w-full">
+        <div className="add-task flex-grow h-full w-1/4">
+          <Modal></Modal>
+        </div>
+
+        <div className="calendar flex-grow w-3/4 h-full">
+          <Calendar></Calendar>
+        </div>
+      </div>
+
     </main>
   );
 }
