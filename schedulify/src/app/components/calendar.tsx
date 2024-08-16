@@ -44,9 +44,10 @@ export default function Calendar() {
         events={[
           {
             // this object will be "parsed" into an Event Object
-            title: "The Title", // a property!
-            start: "2024-08-01", // a property!
-            end: "2024-08-04", // a property! ** see important note below about 'end' **
+            title: "Lock-In Time", // a property!
+            start: "2024-08-22T09:00", // a property!
+            end: "2024-08-22T18:00", // a property!
+            allDay: false,
           },
         ]}
         eventTimeFormat={{
