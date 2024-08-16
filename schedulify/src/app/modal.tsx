@@ -13,7 +13,7 @@ export default function Modal() {
                     <label className="text-sm font-medium text-gray-600">Title</label>
                     <input
                         type="text"
-                        className="w-full px-4 py-2 mt-1 text-base border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Event name"
                     />
                 </div>
@@ -29,7 +29,7 @@ export default function Modal() {
                     <label className="text-sm font-medium text-gray-600">Date</label>
                     <input
                         type="text"
-                        className="w-full px-4 py-2 mt-1 text-base border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 mt-1 text-base border text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Friday, 28 June 2024"
                     />
                 </div>
@@ -38,13 +38,13 @@ export default function Modal() {
                     <div className="flex space-x-2">
                         <input
                             type="text"
-                            className="w-1/2 px-4 py-2 mt-1 text-base border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-1/2 px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="8:00 AM"
                         />
                         <span className="text-gray-500 pt-3">→</span>
                         <input
                             type="text"
-                            className="w-1/2 px-4 py-2 mt-1 text-base border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-1/2 px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="9:00 AM"
                         />
                     </div>
@@ -53,7 +53,7 @@ export default function Modal() {
                     <label className="text-sm font-medium text-gray-600">Note</label>
                     <input
                         type="text"
-                        className="w-full px-4 py-2 mt-1 text-base border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Add Description"
                     />
                 </div>
@@ -61,7 +61,7 @@ export default function Modal() {
                     <label className="text-sm font-medium text-gray-600">Link</label>
                     <input
                         type="text"
-                        className="w-full px-4 py-2 mt-1 text-base border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="https://meet.google.com/..."
                     />
                 </div>
