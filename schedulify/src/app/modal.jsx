@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -8,18 +10,17 @@ import DatePicker from 'react-datepicker';
 import TimePicker from 'react-time-picker';  // Import TimePicker component
 import 'react-time-picker/dist/TimePicker.css';
 import "react-datepicker/dist/react-datepicker.css";
-
-// import 'react-clock/dist/Clock.css';
-
-
-import "@/styles/modal.css";
-
 library.add(fas, far, fab);
 
-function NormalCalendar() {
+export default function Modal( {setNewEventToCalendar} ) {
+    const [isCliked, setIsClicked] = useState(false);
     const [startDate, setStartDate] = useState(new Date());
     const [startTime, setStartTime] = useState('08:00 AM');  // State for start time
     const [endTime, setEndTime] = useState('09:00 AM');  // State for end time
+    const [eventTitle, setEventTitle] = useState('New task');
+    const [note, setNote] = useState('');
+    const [link, setLink] = useState('');
+    const [newEvent, setNewEvent] = useState({})
 
     const handleClicked = () => {
         setIsClicked((prevState) => {
@@ -27,8 +28,23 @@ function NormalCalendar() {
         });
     };
 
+    const handleSavePlan = () => {
+        const newevent = {
+            title: eventTitle,
+            date: startDate,
+            startTime: startTime,
+            endTime: endTime,
+            note: note,
+            link:  link
+        }
+
+        setNewEvent(newevent);
+    }
+
+    
     return (
-        <div className="w-1/3 min-w-96 px-8 py-8 bg-white rounded-xl">
+        <div className="flex items-center justify-center h-full">
+                    <div className="w-1/3 min-w-96 px-8 py-8 bg-white rounded-xl">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold text-black mt-3">New Event</h2>
                 <button>
@@ -41,6 +57,7 @@ function NormalCalendar() {
                     type="text"
                     className="w-full px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Event name"
+                    onChange={(event) => setEventTitle(event.target.value)}
                 />
                 <input type="checkbox" id="checkbox" onChange={handleClicked}/>
                 <label className="text-sm" htmlFor="checkbox"> {' '} Magical Task Break Down {' '} <FontAwesomeIcon icon="fa-solid fa-wand-magic-sparkles" /></label>
@@ -90,6 +107,7 @@ function NormalCalendar() {
                     type="text"
                     className="w-full px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Add Description"
+                    onChange={(event) => setNote(event.target.value)}
                 />
             </div>
             <div className="mb-4">
@@ -98,6 +116,7 @@ function NormalCalendar() {
                     type="text"
                     className="w-full px-4 py-2 mt-1 text-base text-gray-600 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="https://meet.google.com/..."
+                    onChange={(event) => setLink(event.target.value)}
                 />
             </div>
             <div className="mb-4">
@@ -125,11 +144,13 @@ function NormalCalendar() {
                 </div>
                 <div className="flex space-x-2">
                     <button className="px-4 py-2 text-sm text-black bg-gray-200 rounded-md">Cancel</button>
-                    <button className="px-4 py-2 text-sm text-white bg-black rounded-md">Save</button>
+                    <button 
+                        className="px-4 py-2 text-sm text-white bg-black rounded-md"
+                        onClick={handleSavePlan}
+                        >Save</button>
                 </div>
             </div>
         </div>
-    );
+        </div>
+    )
 }
-
-export default NormalCalendar;

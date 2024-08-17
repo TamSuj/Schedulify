@@ -1,5 +1,5 @@
-import Calendar from "@/app/calendar";
-import Modal from "./modal";  
+import Calendar from "@/app/calendar.jsx";
+import Modal from "./modal.jsx";  
 
 export default function Home() {
   return (
