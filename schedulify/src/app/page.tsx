@@ -1,4 +1,3 @@
-"use client";
 import Header from "./components/header";
 import Features from "./components/features";
 import Footer from "./components/footer";
@@ -16,14 +15,24 @@ export default function Home() {
           <Workflow />
         </div>
         <div className="mt-8">
-          <Link href="/interaction">
+          <Link href="/InteractionPage">
             <button className="px-6 py-3 bg-gradient-to-r from-green-400 to-teal-500 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500">
               Interact with AI Scheduler
             </button>
           </Link>
+          <Link href="/AuthPage">
+            <button className=" ml-4 px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500">
+              LOG IN
+            </button>
+          </Link>
+          <Link href="/HomePage">
+            <button className=" ml-4 px-6 py-3 bg-purple-500 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500">
+              Go To Calendar
+            </button>
+          </Link>
         </div>
       </section>
-      <Calendar />
+
       <Footer />
     </main>
   );

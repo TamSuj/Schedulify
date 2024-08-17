@@ -1,0 +1,22 @@
+/* AuthForm.module.css */
+.authButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0284c7; /* Equivalent to bg-sky-600 */
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .authButton:hover {
+    background-color: #0369a1; /* Darker shade for hover */
+  }
+  
+  .authButton:focus {
+    outline: 2px solid #0369a1;
+    outline-offset: 2px;
+  }
+  
